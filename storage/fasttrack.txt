@@ -1,0 +1,18 @@
+1. composer global require laravel/installer
+2. composer create-project laravel/laravel studentcrud
+3. php artisan make:migration create_student_table --create=student
+4. php artisan make:controller StudentController --resource --model=Student
+
+inside migration file
+
+5. add fields in table, then
+6. php artisan migrate
+controller is a resource controller, this is for crud operation
+We are using api.php for routing, because web.php is for webapplications
+7. If we are creating web applications routing are specified in web.php
+8. If we are creating api applications routing are specified in api.php
+9. Routing::resource('student','StudentController');
+10. Open model file, fill all the values
+	protected $fillable = ['name','phonenumber'];
+11. Open Student controller
+	
